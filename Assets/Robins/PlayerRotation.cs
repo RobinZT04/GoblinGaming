@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-
+    public static bool canRotate;
+    private void Awake()
+    {
+        canRotate = true;
+    }
     // Update is called once per frame
     void Update()
+    {
+        if(canRotate)
+        Rotate();
+    }
+
+    void Rotate()
     {
         Vector3 mousePosition = Input.mousePosition; //vector3 mouseposition blir musens positon
 

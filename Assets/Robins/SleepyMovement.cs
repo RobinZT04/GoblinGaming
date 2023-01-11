@@ -19,6 +19,21 @@ public class SleepyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TrashCode();
+        Rotate();
+    }
+
+    void Rotate()
+    {
+        if(transform.position.x >= player.transform.position.x)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }else
+            transform.eulerAngles = new Vector2(0, 180);
+    }
+    void TrashCode()
+    {
+
         if (Vector2.Distance(transform.position, player.transform.position) >= 0.15f && !collecting)
         {
             //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -31,8 +46,8 @@ public class SleepyMovement : MonoBehaviour
             GameObject trash = GameObject.FindGameObjectWithTag("Trash");
             collecting = true;
 
-            if(collecting)
-            transform.position += (trash.transform.position - transform.position).normalized * movementSpeed * Time.deltaTime;
+            if (collecting)
+                transform.position += (trash.transform.position - transform.position).normalized * movementSpeed * Time.deltaTime;
 
             if (Vector2.Distance(transform.position, trash.transform.position) <= 0.15f)
             {
@@ -40,9 +55,8 @@ public class SleepyMovement : MonoBehaviour
                 ScoreManager.score += 100;
                 collecting = false;
             }
-        
+
         }
-            
-            
+
     }
 }
