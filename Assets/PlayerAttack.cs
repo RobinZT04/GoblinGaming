@@ -10,9 +10,6 @@ public class PlayerAttack : MonoBehaviour
     float cooldown;
     bool canAttack;
 
-    //[SerializeField]
-    //Vapen weapon;
-
     public float index;
 
     [SerializeField]
@@ -37,11 +34,9 @@ public class PlayerAttack : MonoBehaviour
         {
             index = 1;
         }
-        print(index);
+
         if (Input.GetMouseButtonDown(0) && canAttack) //Slå med yxan;
         {
-            
-            print("Hit");
             
             if (index == 1)
             {

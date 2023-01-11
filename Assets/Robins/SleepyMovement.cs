@@ -25,7 +25,7 @@ public class SleepyMovement : MonoBehaviour
 
     void Rotate()
     {
-        if(transform.position.x >= player.transform.position.x)
+        if(transform.position.x <= player.transform.position.x)
         {
             transform.eulerAngles = new Vector2(0, 0);
         }else
