@@ -37,6 +37,7 @@ public class SleepyMovement : MonoBehaviour
             if (Vector2.Distance(transform.position, trash.transform.position) <= 0.15f)
             {
                 Destroy(trash);
+                ScoreManager.score += 100;
                 collecting = false;
             }
         
