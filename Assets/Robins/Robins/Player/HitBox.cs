@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class HitBox : MonoBehaviour
 {
-    Rigidbody2D body;
-    public float speed;
+    public Transform box;
     // Start is called before the first frame update
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        body.velocity = transform.up * 10;
+        box.transform.position = transform.position;
+        box.transform.eulerAngles = transform.eulerAngles;
     }
 }

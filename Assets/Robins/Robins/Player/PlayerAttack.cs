@@ -83,7 +83,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if(other.transform.tag == "Vapen")
         {
-            print("YES");
             index = other.GetComponent<PickAbleObject>().index;
             durability = other.GetComponent<PickAbleObject>().durability;
             canAttack = true;
