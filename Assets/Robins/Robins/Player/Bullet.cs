@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        Invoke("DestroyFunction", 0.5f);
     }
 
     // Update is called once per frame
@@ -20,5 +21,10 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print(collision.gameObject.name);
+    }
+
+    void DestroyFunction()
+    {
+        Destroy(gameObject);
     }
 }

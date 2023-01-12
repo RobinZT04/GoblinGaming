@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator cameraAnim;
 
+    public Animator goblinArm;
+
+    public Animator goblinFeet;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,10 +27,14 @@ public class PlayerMovement : MonoBehaviour
         if(body.velocity.magnitude >= 0.1f)
         {
             cameraAnim.SetBool("Moving", true);
+            goblinArm.SetBool("Moving", true);
+            goblinFeet.SetBool("Moving", true);
         }
         else
         {
             cameraAnim.SetBool("Moving", false);
+            goblinArm.SetBool("Moving", false);
+            goblinFeet.SetBool("Moving", false);
         }
     }
 }
