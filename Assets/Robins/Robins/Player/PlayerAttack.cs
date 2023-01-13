@@ -73,6 +73,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 durability -= 1;
                 goblinSource.PlayOneShot(shootingClip, 1);
+                goblinArm.SetBool("Gun", true);
                 Invoke("Shoot", cooldown);
                 canAttack = false;
                 Instantiate(bullet, bulletSpawnPoint.transform.position, transform.rotation);
@@ -96,7 +97,8 @@ public class PlayerAttack : MonoBehaviour
 
     void Shoot()
     {
-            PlayerRotation.canRotate = true;
+        goblinArm.SetBool("Gun", false);
+        PlayerRotation.canRotate = true;
             Invoke("Cooldown", cooldown);
     }
 
@@ -110,6 +112,7 @@ public class PlayerAttack : MonoBehaviour
         if(other.transform.tag == "Vapen")
         {
             goblinArm.SetBool("Axe", false);
+            goblinArm.SetBool("Gun", false);
             index = other.GetComponent<PickAbleObject>().index;
             durability = other.GetComponent<PickAbleObject>().durability;
             canAttack = true;
