@@ -18,7 +18,7 @@ public class EnemyStats : MonoBehaviour
         {
             print("YEES");
             Instantiate(trash, transform.position, Quaternion.identity);
-            enemySource.PlayOneShot(enemyClip, 1);
+            enemySource.PlayOneShot(enemyClip, 0.5f);
             Death();
         }
     }

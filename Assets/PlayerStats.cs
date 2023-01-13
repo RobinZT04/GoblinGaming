@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(hp >= 0 && hp <2)
         healthBar.sprite = healthStates[hp];
         print(hp);
     }

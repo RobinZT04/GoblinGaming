@@ -27,6 +27,8 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource goblinSource;
     public AudioClip goblinClip;
     public AudioClip swingClip;
+    public AudioClip shootingClip;
+    public AudioClip gunClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,7 @@ public class PlayerAttack : MonoBehaviour
             if (index == 2)
             {
                 durability -= 1;
+                goblinSource.PlayOneShot(shootingClip, 1);
                 Invoke("Shoot", cooldown);
                 canAttack = false;
                 Instantiate(bullet, bulletSpawnPoint.transform.position, transform.rotation);

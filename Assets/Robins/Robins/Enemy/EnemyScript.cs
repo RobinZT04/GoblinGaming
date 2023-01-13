@@ -23,6 +23,8 @@ public class EnemyScript : MonoBehaviour
     public GameObject bulletEnemy;
     public Transform humanRot;
 
+    public Transform bulletSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,7 @@ public class EnemyScript : MonoBehaviour
                 {
                     if (!CanShoot)
                     {
-                        Instantiate(bulletEnemy, transform.position, humanRot.transform.rotation);
+                        Instantiate(bulletEnemy, bulletSpawn.transform.position, humanRot.transform.rotation);
                         Invoke("Cooldown", 1);
                         CanShoot = true;
                     }
