@@ -9,7 +9,8 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Image characterImage;
 
-    public Animator animator;
+    public Animator dialogueAnimator;
+    public Animator fadeAnimator;
     public AudioSource audioSource;
 
     private Queue<string> sentences;
@@ -26,10 +27,18 @@ public class DialogueManager : MonoBehaviour
         sprites = new Queue<Sprite>();
         names = new Queue<string>();
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && dialogueAnimator.GetBool("IsOpen"))
+        {
+            DisplayNextSentence();
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
         //Startar dialogen med en animation -William
-        animator.SetBool("IsOpen", true);
+        dialogueAnimator.SetBool("IsOpen", true);
+        fadeAnimator.SetBool("IsOpen", true);
 
         //Tömmer queuen innan man startar upp en ny dialog -William
         sentences.Clear();
@@ -37,12 +46,12 @@ public class DialogueManager : MonoBehaviour
         sprites.Clear();
         names.Clear();
 
-        //Varje mening i dialogen läggs in i queuen -William
+        //Varje mening/ljudfil/sprite/namn läggs in i sin queue -William
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-        //Varje ljudfil läggs in i queuen -William
+        //Har en if-sats för jag orkar inte ha en ljudfil vid varje test, ta bort den här senare -William
         if (dialogue.audioClips.Length > 0)
         {
             foreach (AudioClip audioClip in dialogue.audioClips)
@@ -110,6 +119,7 @@ public class DialogueManager : MonoBehaviour
     //Avslutar dialogen med en animation -William
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        dialogueAnimator.SetBool("IsOpen", false);
+        fadeAnimator.SetBool("IsOpen", false);
     }
 }
