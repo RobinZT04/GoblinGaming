@@ -6,11 +6,35 @@ public class HumanBody : MonoBehaviour
 {
     [SerializeField]
     Transform body;
+    [SerializeField]
+    Rigidbody2D bodyRB;
+
 
     GameObject player;
+
+    public Animator enemyBody;
+    public Animator enemyFeet;
+
+    public bool chasing;
+
+    private void Awake()
+    {
+        chasing = false;
+    }
     // Start is called before the first frame update
     void Update()
     {
+        if(chasing)
+        {
+            enemyBody.SetBool("Moving", true);
+            enemyFeet.SetBool("Moving", true);
+        }
+        else
+        {
+            enemyBody.SetBool("Moving", false);
+            enemyFeet.SetBool("Moving", false);
+        }
+
         transform.position = body.transform.position;
         player = GameObject.FindGameObjectWithTag("Player");
     }

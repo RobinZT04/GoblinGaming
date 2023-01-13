@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Sound")]
     public AudioSource goblinSource;
-    public AudioClip goblinClip;
+    public AudioClip[] goblinClip;
     public AudioClip swingClip;
     public AudioClip shootingClip;
     public AudioClip gunClip;
@@ -61,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
             if (index == 1)
             {
                 //if(!goblinSource.isPlaying)
-                goblinSource.PlayOneShot(goblinClip, 1);
+                goblinSource.PlayOneShot(goblinClip[Random.Range(0,goblinClip.Length)], 1);
                 goblinSource.PlayOneShot(swingClip, 1);
                 goblinArm.SetBool("Axe", true);
                 Invoke("Attack", cooldown);

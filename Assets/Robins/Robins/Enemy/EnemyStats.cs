@@ -8,7 +8,7 @@ public class EnemyStats : MonoBehaviour
     public GameObject Enemy;
     [Header("Sound")]
     public AudioSource enemySource;
-    public AudioClip enemyClip;
+    public AudioClip[] enemyClip;
     public EnemyScript enemy;
     RaycastHit2D hit;
 
@@ -18,7 +18,7 @@ public class EnemyStats : MonoBehaviour
         {
             print("YEES");
             Instantiate(trash, transform.position, Quaternion.identity);
-            enemySource.PlayOneShot(enemyClip, 0.5f);
+            enemySource.PlayOneShot(enemyClip[Random.Range(0, enemyClip.Length)], 0.5f);
             Death();
         }
     }

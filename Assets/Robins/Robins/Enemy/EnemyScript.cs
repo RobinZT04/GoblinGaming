@@ -42,14 +42,16 @@ public class EnemyScript : MonoBehaviour
             if (Vector3.Distance(transform.position, player.transform.position) <= 5) //Elanor
             {
                 chasing = true;
+                humanBody.chasing = true;
             }
             if (chasing) //Elanor
             {
                 if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
                 {
+                    humanBody.chasing = false;
                     if (!CanShoot)
                     {
-                        Instantiate(bulletEnemy, bulletSpawn.transform.position, humanRot.transform.rotation);
+                        Instantiate(bulletEnemy, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
                         Invoke("Cooldown", 1);
                         CanShoot = true;
                     }
