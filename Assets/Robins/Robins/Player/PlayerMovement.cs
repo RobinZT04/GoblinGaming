@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator goblinFeet;
 
+    [Header("Sound")]
+    public AudioSource goblinWalking;
+    public AudioClip goblinWalkingClip;
+
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
             cameraAnim.SetBool("Moving", true);
             goblinArm.SetBool("Moving", true);
             goblinFeet.SetBool("Moving", true);
+            if (!goblinWalking.isPlaying)
+            {
+                goblinWalking.pitch = Random.Range(0.9f, 1.1f);
+                goblinWalking.PlayOneShot(goblinWalkingClip, 0.2f);
+            }
         }
         else
         {

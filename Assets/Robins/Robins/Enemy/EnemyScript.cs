@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyScript : MonoBehaviour
 {
-    
+
     GameObject player;
     [SerializeField]
     NavMeshAgent agent;
@@ -15,6 +15,8 @@ public class EnemyScript : MonoBehaviour
     public Transform[] pathPos; //Elanor
     public int nuvarandeposition; //Elanor
     public bool chasing; //Elanor 
+
+    public bool DEAD;
 
     // Start is called before the first frame update
     void Start()
@@ -27,32 +29,36 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) <= 5) //Elanor
+        if (!DEAD)
         {
-            chasing = true;
-        }
-        if (chasing) //Elanor
-        {
-            agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z)); //Robin
-            humanBody.Invoke("Head", 0); //Robin 
-            chasing = true; //Elanor
-        }
-
-        transform.eulerAngles = new Vector3(0, 0, 0); //Robin
-
-        if (!chasing) //Elanor - Gubben rör sig mot nästa position när den har gått till sista positionen resetas det.
-        {
-            transform.position = Vector2.MoveTowards(transform.position, pathPos[nuvarandeposition].transform.position, 1 * Time.deltaTime); //Elanor
-            if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
+            if (Vector3.Distance(transform.position, player.transform.position) <= 5) //Elanor
             {
-                nuvarandeposition += 1; //Elanor
+                chasing = true;
+            }
+            if (chasing) //Elanor
+            {
+                agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z)); //Robin
+                humanBody.Invoke("Head", 0); //Robin 
+                chasing = true; //Elanor
             }
 
-            if (nuvarandeposition == pathPos.Length) //Elanor
+            transform.eulerAngles = new Vector3(0, 0, 0); //Robin
+
+            if (!chasing) //Elanor - Gubben rör sig mot nästa position när den har gått till sista positionen resetas det.
             {
-                nuvarandeposition = 0; //Elanor
-            }     
-          
+                transform.position = Vector2.MoveTowards(transform.position, pathPos[nuvarandeposition].transform.position, 1 * Time.deltaTime); //Elanor
+                if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
+                {
+                    nuvarandeposition += 1; //Elanor
+                }
+
+                if (nuvarandeposition == pathPos.Length) //Elanor
+                {
+                    nuvarandeposition = 0; //Elanor
+                }
+
+            }
+
         }
     }
 }

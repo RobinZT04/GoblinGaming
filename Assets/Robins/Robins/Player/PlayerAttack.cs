@@ -18,6 +18,15 @@ public class PlayerAttack : MonoBehaviour
     Transform bulletSpawnPoint;
 
     public float durability;
+
+    public Animator goblinArm;
+
+    public Rigidbody2D body;
+
+    [Header("Sound")]
+    public AudioSource goblinSource;
+    public AudioClip goblinClip;
+    public AudioClip swingClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +39,15 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (body.velocity.magnitude >= 0.1f)
+        {
+            goblinArm.SetBool("Moving", true);
+
+        }
+        else
+        {
+            goblinArm.SetBool("Moving", false);
+        }
         if (durability == 0)
         {
             index = 1;
@@ -40,6 +58,10 @@ public class PlayerAttack : MonoBehaviour
             
             if (index == 1)
             {
+                //if(!goblinSource.isPlaying)
+                goblinSource.PlayOneShot(goblinClip, 1);
+                goblinSource.PlayOneShot(swingClip, 1);
+                goblinArm.SetBool("Axe", true);
                 Invoke("Attack", cooldown);
                 canAttack = false;
                 hitboxAxe.SetActive(true);
@@ -62,6 +84,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (index == 1)
         {
+            goblinArm.SetBool("Axe", false);
             hitboxAxe.SetActive(false);
             PlayerRotation.canRotate = true;
             Invoke("Cooldown", cooldown);
@@ -83,6 +106,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(other.transform.tag == "Vapen")
         {
+            goblinArm.SetBool("Axe", false);
             index = other.GetComponent<PickAbleObject>().index;
             durability = other.GetComponent<PickAbleObject>().durability;
             canAttack = true;

@@ -10,6 +10,11 @@ public class SleepyMovement : MonoBehaviour
     public float movementSpeed;
     GameObject trash;
     bool collecting;
+
+    [SerializeField]
+    AudioSource sleepySource;
+    [SerializeField]
+    AudioClip sleepyClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +57,10 @@ public class SleepyMovement : MonoBehaviour
             if (Vector2.Distance(transform.position, trash.transform.position) <= 0.15f)
             {
                 Destroy(trash);
+                if (!sleepySource.isPlaying)
+                {
+                    sleepySource.PlayOneShot(sleepyClip, 1);
+                }
                 ScoreManager.score += 100;
                 collecting = false;
             }
