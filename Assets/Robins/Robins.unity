@@ -3868,6 +3868,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1745290844 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+  m_PrefabInstance: {fileID: 4876685763790975437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804661210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4803,9 +4808,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1113941576}
     - target: {fileID: 2071647998049472026, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: enemyStep
+      value: 
+      objectReference: {fileID: 8300000, guid: d58861d49a974b049a51c880c0f96ad5, type: 3}
+    - target: {fileID: 2071647998049472026, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: bulletSpawn
       value: 
       objectReference: {fileID: 2113878630}
+    - target: {fileID: 2071647998049472026, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: enemySource
+      value: 
+      objectReference: {fileID: 1745290844}
     - target: {fileID: 2071647998049472026, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: pathPos.Array.data[0]
       value: 

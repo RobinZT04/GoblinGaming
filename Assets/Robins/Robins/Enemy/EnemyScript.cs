@@ -25,6 +25,10 @@ public class EnemyScript : MonoBehaviour
 
     public Transform bulletSpawn;
 
+    public AudioSource enemySource;
+    public AudioClip enemyStep;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,7 @@ public class EnemyScript : MonoBehaviour
             {
                 chasing = true;
                 humanBody.chasing = true;
+
             }
             if (chasing) //Elanor
             {
@@ -59,6 +64,10 @@ public class EnemyScript : MonoBehaviour
                 }
                 else
                 {
+                    if (!enemySource.isPlaying)
+                    {
+                        enemySource.PlayOneShot(enemyStep, 1);
+                    }
                     agent.isStopped = false;
                 }
 
