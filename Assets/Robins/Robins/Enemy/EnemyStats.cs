@@ -10,6 +10,8 @@ public class EnemyStats : MonoBehaviour
     public AudioSource enemySource;
     public AudioClip enemyClip;
     public EnemyScript enemy;
+    RaycastHit2D hit;
+
     public void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.tag == "Damage")

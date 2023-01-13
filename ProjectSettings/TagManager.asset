@@ -7,6 +7,8 @@ TagManager:
   - Trash
   - Vapen
   - Damage
+  - HealthBar
+  - EW
   layers:
   - Default
   - TransparentFX

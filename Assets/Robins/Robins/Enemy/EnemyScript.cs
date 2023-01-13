@@ -18,9 +18,10 @@ public class EnemyScript : MonoBehaviour
 
     public bool DEAD;
 
-    public LayerMask layer;
+    bool CanShoot;
 
-    public Transform ex;
+    public GameObject bulletEnemy;
+    public Transform humanRot;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class EnemyScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         chasing = false;//Elanor
         nuvarandeposition = 0; //Elanor
+        CanShoot = false;
     }
 
     // Update is called once per frame
@@ -41,15 +43,21 @@ public class EnemyScript : MonoBehaviour
             }
             if (chasing) //Elanor
             {
-                RaycastHit2D hit = Physics2D.Raycast(ex.transform.position, Vector2.up, 4);
-                
                 if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
                 {
-                    print(hit.transform.gameObject.name);
+                    if (!CanShoot)
+                    {
+                        Instantiate(bulletEnemy, transform.position, humanRot.transform.rotation);
+                        Invoke("Cooldown", 1);
+                        CanShoot = true;
+                    }
                     agent.isStopped = true;
                 }
                 else
+                {
                     agent.isStopped = false;
+                }
+
 
                 agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z)); //Robin
                 humanBody.Invoke("Head", 0); //Robin 
@@ -75,4 +83,10 @@ public class EnemyScript : MonoBehaviour
 
         }
     }
+
+    void Cooldown()
+    {
+        CanShoot = false;
+    }
+
 }
