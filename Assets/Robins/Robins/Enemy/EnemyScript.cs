@@ -18,6 +18,10 @@ public class EnemyScript : MonoBehaviour
 
     public bool DEAD;
 
+    public LayerMask layer;
+
+    public Transform ex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,16 @@ public class EnemyScript : MonoBehaviour
             }
             if (chasing) //Elanor
             {
+                RaycastHit2D hit = Physics2D.Raycast(ex.transform.position, Vector2.up, 4);
+                
+                if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
+                {
+                    print(hit.transform.gameObject.name);
+                    agent.isStopped = true;
+                }
+                else
+                    agent.isStopped = false;
+
                 agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z)); //Robin
                 humanBody.Invoke("Head", 0); //Robin 
                 chasing = true; //Elanor
