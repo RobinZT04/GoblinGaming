@@ -16,7 +16,6 @@ public class EnemyStats : MonoBehaviour
     {
         if(other.transform.tag == "Damage")
         {
-            print("YEES");
             Instantiate(trash, transform.position, Quaternion.identity);
             enemySource.PlayOneShot(enemyClip[Random.Range(0, enemyClip.Length)], 0.5f);
             Death();

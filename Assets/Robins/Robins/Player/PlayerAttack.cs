@@ -8,16 +8,17 @@ public class PlayerAttack : MonoBehaviour
     GameObject hitboxAxe;
     [SerializeField]
     float cooldown;
-    bool canAttack;
+    public static bool canAttack;
 
-    public float index;
+    public int index;
+    public Weapons[] weapon;
 
     [SerializeField]
     GameObject bullet;
     [SerializeField]
     Transform bulletSpawnPoint;
 
-    public float durability;
+    public static float durability;
 
     public Animator goblinArm;
 
@@ -52,56 +53,27 @@ public class PlayerAttack : MonoBehaviour
         }
         if (durability == 0)
         {
-            index = 1;
+            goblinArm.SetBool("Gun", false);
+            index = 0;
         }
 
         if (Input.GetMouseButtonDown(0) && canAttack) //Slå med yxan;
         {
-            
-            if (index == 1)
-            {
-                //if(!goblinSource.isPlaying)
-                goblinSource.PlayOneShot(goblinClip[Random.Range(0,goblinClip.Length)], 1);
-                goblinSource.PlayOneShot(swingClip, 1);
-                goblinArm.SetBool("Axe", true);
-                Invoke("Attack", cooldown);
-                canAttack = false;
-                hitboxAxe.SetActive(true);
-                PlayerRotation.canRotate = false;
-            }
+            weapon[index].Attack();
+            Invoke("EndAttack", cooldown);
             if (index == 2)
             {
-                durability -= 1;
-                goblinSource.PlayOneShot(shootingClip, 1);
-                goblinArm.SetBool("Gun", true);
-                Invoke("Shoot", cooldown);
-                canAttack = false;
-                Instantiate(bullet, bulletSpawnPoint.transform.position, transform.rotation);
-                bullet.GetComponent<Bullet>().speed = 10;
-                PlayerRotation.canRotate = false;
+ 
             }
 
         }
     }
 
-    void Attack() //Attakerar
+    void EndAttack() //Attakerar
     {
-        if (index == 1)
-        {
-            goblinArm.SetBool("Axe", false);
-            hitboxAxe.SetActive(false);
-            PlayerRotation.canRotate = true;
-            Invoke("Cooldown", cooldown);
-        }
+        weapon[index].EndAttack();
+        Invoke("Cooldown", cooldown);
     }
-
-    void Shoot()
-    {
-        goblinArm.SetBool("Gun", false);
-        PlayerRotation.canRotate = true;
-            Invoke("Cooldown", cooldown);
-    }
-
     void Cooldown() //cooldown
     {
         canAttack = true;

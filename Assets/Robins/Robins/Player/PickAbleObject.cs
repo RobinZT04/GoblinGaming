@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PickAbleObject : MonoBehaviour//, IWeapon
 {
-    public float index;
+    public int index;
     public float durability;
 }

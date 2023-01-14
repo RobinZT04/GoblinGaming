@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956e9bf322764684d8be6b4e63e7958e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 1
   durability: 3
 --- !u!58 &16027607
 CircleCollider2D:
@@ -191,9 +191,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000036365993, y: 0.3050601}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.966926
 --- !u!212 &16027608
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8242737cb34713d4dafcb81847e48219, type: 3}
   m_Color: {r: 0.7169812, g: 0.7147265, b: 0.7147265, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -252,13 +252,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16027604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 7.55, y: 0.08, z: 0}
-  m_LocalScale: {x: 1, y: 0.4195, z: 1}
+  m_LocalScale: {x: 0.27586, y: 0.27586, z: 0.27586}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &16892107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,7 +2029,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.57
+  orthographic size: 3.06
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3274,6 +3274,9 @@ GameObject:
   - component: {fileID: 1639636158}
   - component: {fileID: 1639636152}
   - component: {fileID: 1639636151}
+  - component: {fileID: 1639636160}
+  - component: {fileID: 1639636159}
+  - component: {fileID: 1639636161}
   m_Layer: 0
   m_Name: "G\xF6blin Player"
   m_TagString: Player
@@ -3354,9 +3357,11 @@ MonoBehaviour:
   hitboxAxe: {fileID: 21863642}
   cooldown: 0.35
   index: 0
+  weapon:
+  - {fileID: 1639636159}
+  - {fileID: 1639636161}
   bullet: {fileID: 1065123369240204442, guid: 8e09052a258d8334cab394c2ea0e95a3, type: 3}
   bulletSpawnPoint: {fileID: 2084286143}
-  durability: 0
   goblinArm: {fileID: 318077323}
   body: {fileID: 1639636156}
   goblinSource: {fileID: 1833203871}
@@ -3484,6 +3489,54 @@ MonoBehaviour:
   healthStates:
   - {fileID: 21300000, guid: 76beef9fdae7b48468ddf07d0400a374, type: 3}
   - {fileID: 21300000, guid: 0779ad3feec52124e97114bcbb12ef13, type: 3}
+--- !u!114 &1639636159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639636149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb094bc4dcfd734394781eab724982e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goblinArm: {fileID: 318077323}
+  hitboxAxe: {fileID: 21863642}
+  goblinSource: {fileID: 1833203871}
+  goblinClip:
+  - {fileID: 8300000, guid: 85f59daf3ff17fa4d8cb7e25d7a27cce, type: 3}
+  - {fileID: 8300000, guid: fd7c765ccbcb243468bd7dffd670a2ab, type: 3}
+  swingClip: {fileID: 8300000, guid: ed34ea826cd2d4b4f84849c9bea2058e, type: 3}
+--- !u!114 &1639636160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639636149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed606829be2a624bbe289febf7c6f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1639636161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639636149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95bc5419cdb08bb438f43409e2c4aeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goblinArm: {fileID: 318077323}
+  goblinSource: {fileID: 1833203871}
+  shootingClip: {fileID: 8300000, guid: f8b398206e43b364698eeaec36163a00, type: 3}
+  bullet: {fileID: 1065123369240204442, guid: 8e09052a258d8334cab394c2ea0e95a3, type: 3}
+  bulletSpawnPoint: {fileID: 2084286143}
 --- !u!1 &1679695214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,7 +3813,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -3866,13 +3919,95 @@ Transform:
   m_LocalScale: {x: 0.1909983, y: 0.1909983, z: 0.1909983}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1745290844 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
   m_PrefabInstance: {fileID: 4876685763790975437}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1757303009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757303011}
+  - component: {fileID: 1757303010}
+  m_Layer: 0
+  m_Name: linolium golv yay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1757303010
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757303009}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -4
+  m_Sprite: {fileID: 21300000, guid: db1c7b18bcb2cb149b247c0307bdbb67, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 146.09596, y: 110}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1757303011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757303009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.19, y: 5.08, z: 0}
+  m_LocalScale: {x: 0.1909983, y: 0.1909983, z: 0.1909983}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804661210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956e9bf322764684d8be6b4e63e7958e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 0
   durability: 0
 --- !u!58 &1887009121
 CircleCollider2D:
