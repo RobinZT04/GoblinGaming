@@ -61,11 +61,6 @@ public class PlayerAttack : MonoBehaviour
         {
             weapon[index].Attack();
             Invoke("EndAttack", cooldown);
-            if (index == 2)
-            {
- 
-            }
-
         }
     }
 

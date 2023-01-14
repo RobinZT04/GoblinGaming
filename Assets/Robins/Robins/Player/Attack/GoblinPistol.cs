@@ -18,12 +18,12 @@ public class GoblinPistol : Weapons
 
     public override void Attack()
     {
-        PlayerAttack.durability -= 1;
         goblinSource.PlayOneShot(shootingClip, 1);
         goblinArm.SetBool("Gun", true);
         PlayerAttack.canAttack = false;
         Instantiate(bullet, bulletSpawnPoint.transform.position, transform.rotation);
         bullet.GetComponent<Bullet>().speed = 10;
+        PlayerAttack.durability -= 1;
         PlayerRotation.canRotate = false;
     }
 
