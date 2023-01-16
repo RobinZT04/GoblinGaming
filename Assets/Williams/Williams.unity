@@ -3808,9 +3808,8 @@ MonoBehaviour:
     sentences:
     - https://open.spotify.com/playlist/1qpsNejHAFaz8XkpyQKJBk
     - Just nu testar jag bara dialogfunktionen.
-    - "Den d\xE4r spotify spellistan \xE4r j\xE4vligt bra tbh frfr no cap on a stack"
-    - "Jag \xE4r definitivt inte sj\xE4lvmordsben\xE4gen sluta skicka mig numret
-      till sj\xE4lvmordslinjen >:("
+    - "H\xE4ng dig sj\xE4lv."
+    - "Hej d\xE5."
 --- !u!114 &1453095833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4405,14 +4404,19 @@ MonoBehaviour:
   hitboxAxe: {fileID: 210869842}
   cooldown: 0.35
   index: 0
+  weapon: []
   bullet: {fileID: 1065123369240204442, guid: 8e09052a258d8334cab394c2ea0e95a3, type: 3}
   bulletSpawnPoint: {fileID: 882429958}
-  durability: 0
   goblinArm: {fileID: 363213119}
   body: {fileID: 1594046898}
   goblinSource: {fileID: 1949707037}
-  goblinClip: {fileID: 8300000, guid: 95795d610b556714299a719b3151b40f, type: 3}
+  goblinClip:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   swingClip: {fileID: 8300000, guid: ed34ea826cd2d4b4f84849c9bea2058e, type: 3}
+  shootingClip: {fileID: 0}
+  gunClip: {fileID: 0}
 --- !u!114 &1594046896
 MonoBehaviour:
   m_ObjectHideFlags: 0
