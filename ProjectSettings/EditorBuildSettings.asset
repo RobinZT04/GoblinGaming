@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Henrys/MainMenu.unity
+    guid: 8c25ec14c1c863a4399e99f0fc48c99c
+  - enabled: 1
+    path: Assets/Henrys/SettingsScreen.unity
+    guid: 5c59ca470d77dab46a9c57b7b20bfb07
+  - enabled: 1
+    path: Assets/Henrys/CreditsScreen.unity
+    guid: 5ca5ff0c99deef94d9c16926a3f1be2c
+  - enabled: 0
+    path: Assets/Henrys/LoadingScreen.unity
+    guid: d632dd923d4c7f84db0247cba8ef39a5
   m_configObjects: {}
