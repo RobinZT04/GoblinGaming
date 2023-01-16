@@ -24,7 +24,7 @@ public class HumanBody : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if(chasing)
+        if(chasing) //ändrar animationer för fiende  //Robin
         {
             enemyBody.SetBool("Moving", true);
             enemyFeet.SetBool("Moving", true);
@@ -42,6 +42,7 @@ public class HumanBody : MonoBehaviour
     // Update is called once per frame
     public void Head()
     {
+        //vänder sig mot spelaren //Robin
         Vector2 direction = new Vector2 //Vector2 direction är new vector2
          (
          player.transform.position.x - transform.position.x, //tar musens positon.x - transform.position.x

@@ -10,9 +10,9 @@ public class EnemyStats : MonoBehaviour
     public AudioSource enemySource;
     public AudioClip[] enemyClip;
     public EnemyScript enemy;
-    RaycastHit2D hit;
+    //RaycastHit2D hit;
 
-    public void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other) //Fiende tar skada och spelar ett random ljud när dem dör //Robin
     {
         if(other.transform.tag == "Damage")
         {

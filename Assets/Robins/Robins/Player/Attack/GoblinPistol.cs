@@ -11,25 +11,57 @@ public class GoblinPistol : Weapons
 
     public AudioClip shootingClip;
 
+    public AudioSource timeSource;
+    public AudioClip timeclip1;
+    public AudioClip timeclip2;
+
     [SerializeField]
     GameObject bullet;
     [SerializeField]
     Transform bulletSpawnPoint;
 
-    public override void Attack()
+    public SpriteRenderer sprite;
+    public Sprite gun;
+
+    public override void Attack() //skjuter med pistolen  //Robin
     {
+        goblinArm.SetBool("GunIdle", false);
         goblinSource.PlayOneShot(shootingClip, 1);
         goblinArm.SetBool("Gun", true);
         PlayerAttack.canAttack = false;
         Instantiate(bullet, bulletSpawnPoint.transform.position, transform.rotation);
         bullet.GetComponent<Bullet>().speed = 10;
-        PlayerAttack.durability -= 1;
+
         PlayerRotation.canRotate = false;
     }
 
-    public override void EndAttack()
+    public override void EndAttack() //avslutar skjuta med pistolen  //Robin
     {
-        goblinArm.SetBool("Gun", false);
+        sprite.sprite = gun;
+        goblinArm.SetBool("GunIdle", true);
         PlayerRotation.canRotate = true;
+        PlayerAttack.durability -= 1;
+    }
+
+    public override void RightClick() //använder ability (sakta ned tiden)  //Robin
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (timeSource.isPlaying)
+                timeSource.Stop();
+            if (!timeSource.isPlaying)
+                timeSource.PlayOneShot(timeclip1, 0.2f);
+            Time.timeScale = 0.65f;
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            if (timeSource.isPlaying)
+                timeSource.Stop();
+                if (!timeSource.isPlaying)
+                timeSource.PlayOneShot(timeclip2, 0.2f);
+            Time.timeScale = 1f;
+        }
+
+
     }
 }

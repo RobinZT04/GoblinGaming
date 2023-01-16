@@ -14,7 +14,8 @@ public class HitBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        box.transform.position = transform.position;
+        //Sätter yxhitbox postionen //Robin
+        box.transform.position = transform.position; 
         box.transform.eulerAngles = transform.eulerAngles;
     }
 }
