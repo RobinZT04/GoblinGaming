@@ -10,10 +10,19 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField]
     Text scoreTXT;
+    public static int kills;
+
+    public int limit;
 
     // Update is called once per frame
     void Update()
     {
-        scoreTXT.text = score.ToString();
+
+        if(limit == kills) //Robin
+        {
+            print("Elevator Open");
+        }
+
+        scoreTXT.text = score.ToString(); //Robin
     }
 }

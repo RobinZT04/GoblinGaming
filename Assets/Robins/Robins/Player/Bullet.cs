@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     {
         bounceBack = false;
         body = GetComponent<Rigidbody2D>();
-        Invoke("DestroyFunction", 0.85f);
+        Invoke("DestroyFunction", 0.3f);
         
     }
 
@@ -43,6 +43,8 @@ public class Bullet : MonoBehaviour
         {
             bounceBack = true;
         }
+
+        Destroy(gameObject);
     }
 
     void DestroyFunction()
