@@ -12,8 +12,11 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canRotate)
-        Rotate();
+        if (!PlayerAttack.playerDead)
+        {
+            if (canRotate)
+                Rotate();
+        }
     }
 
     void Rotate() //Roterar spelaren mot musen //Robin

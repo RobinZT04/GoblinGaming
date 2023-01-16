@@ -17,6 +17,8 @@ public class HumanBody : MonoBehaviour
 
     public bool chasing;
 
+    public bool animate;
+
     private void Awake()
     {
         chasing = false;
@@ -24,7 +26,7 @@ public class HumanBody : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if(chasing) //ändrar animationer för fiende  //Robin
+        if(animate) //ändrar animationer för fiende  //Robin
         {
             enemyBody.SetBool("Moving", true);
             enemyFeet.SetBool("Moving", true);

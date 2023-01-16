@@ -32,6 +32,8 @@ public class EnemyScript : MonoBehaviour
 
     RaycastHit2D hit;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +47,9 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         
-        if (!DEAD)
+        if (!DEAD && !PlayerAttack.playerDead)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) <= 5) //Elanor
+            if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
             {
                 chasing = true;
                 humanBody.chasing = true;
@@ -55,7 +57,7 @@ public class EnemyScript : MonoBehaviour
             }
             if (chasing) //Elanor
             {
-                    if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
+                    if (Vector3.Distance(transform.position, player.transform.position) <= 3) //Elanor
                     {
 
                         hit = Physics2D.Raycast(humanRot.transform.position, humanRot.transform.up, 4); //Skickar ut en raycast //Robin
@@ -69,6 +71,7 @@ public class EnemyScript : MonoBehaviour
                         {
                         if (!CanShoot) //om du kan skjuta skjuter gubben //Robin
                             {
+                                humanBody.animate = false;
                                 Instantiate(bulletEnemy, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
                                 Invoke("Cooldown", 1);
                                 CanShoot = true;
@@ -84,9 +87,10 @@ public class EnemyScript : MonoBehaviour
                 }
                 else
                 {
+                    humanBody.animate = true;
                     if (!enemySource.isPlaying) //om gubben går spelas ljudet //Robin
                     {
-                        enemySource.PlayOneShot(enemyStep, 1);
+                        enemySource.PlayOneShot(enemyStep, 0.2f);
                     }
                     agent.isStopped = false; //gubben kan gå //Robin
                 }
