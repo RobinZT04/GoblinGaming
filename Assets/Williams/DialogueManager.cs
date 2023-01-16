@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
+        //Klickar man på vänsterklick så visas nästa del av dialogen -William
         if (Input.GetKeyDown(KeyCode.Mouse0) && dialogueAnimator.GetBool("IsOpen"))
         {
             DisplayNextSentence();
