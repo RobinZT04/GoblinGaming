@@ -30,6 +30,9 @@ public class PlayerAttack : MonoBehaviour
     public AudioClip swingClip;
     public AudioClip shootingClip;
     public AudioClip gunClip;
+
+    public AudioSource timeSource;
+    public AudioClip timeclip2;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,29 +45,46 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (body.velocity.magnitude >= 0.1f)
+        if (body.velocity.magnitude >= 0.1f) //Spelar en animation när du går  //Robin
         {
             goblinArm.SetBool("Moving", true);
-
+            
         }
         else
         {
             goblinArm.SetBool("Moving", false);
         }
-        if (durability == 0)
+
+        if (durability == 0) //Om du har slut på durability  //Robin
         {
             goblinArm.SetBool("Gun", false);
+
+            if (index == 1) //om du använder pistolen resettas saker som pistolen gjort  //Robin
+            {
+                Time.timeScale = 1f;
+                if (Input.GetMouseButton(1))
+                {
+                    if (timeSource.isPlaying)
+                        timeSource.Stop();
+                    if (!timeSource.isPlaying)
+                        timeSource.PlayOneShot(timeclip2, 0.5f);
+                }
+            }
             index = 0;
         }
 
-        if (Input.GetMouseButtonDown(0) && canAttack) //Slå med yxan;
+        if (Input.GetMouseButtonDown(0) && canAttack) //Slå med vapen  //Robin
         {
             weapon[index].Attack();
             Invoke("EndAttack", cooldown);
         }
+
+            weapon[index].RightClick(); //gör det möjligt att använda högerklicks ability  //Robin
+
+
     }
 
-    void EndAttack() //Attakerar
+    void EndAttack() //avslutar attacken  //Robin
     {
         weapon[index].EndAttack();
         Invoke("Cooldown", cooldown);
@@ -74,7 +94,7 @@ public class PlayerAttack : MonoBehaviour
         canAttack = true;
     }
 
-    public void OnTriggerStay2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other) //Plockar upp vapen
     {
         if(other.transform.tag == "Vapen")
         {

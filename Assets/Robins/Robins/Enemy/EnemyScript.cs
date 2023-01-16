@@ -28,6 +28,9 @@ public class EnemyScript : MonoBehaviour
     public AudioSource enemySource;
     public AudioClip enemyStep;
 
+    public bool goAround;
+
+    RaycastHit2D hit;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +44,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!DEAD)
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= 5) //Elanor
@@ -51,24 +55,40 @@ public class EnemyScript : MonoBehaviour
             }
             if (chasing) //Elanor
             {
-                if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
-                {
-                    humanBody.chasing = false;
-                    if (!CanShoot)
+                    if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
                     {
-                        Instantiate(bulletEnemy, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-                        Invoke("Cooldown", 1);
-                        CanShoot = true;
+
+                        hit = Physics2D.Raycast(humanRot.transform.position, humanRot.transform.up, 4); //Skickar ut en raycast //Robin
+                    Debug.DrawRay(humanRot.transform.position, humanRot.transform.up, Color.green, 4);
+
+
+                    if (hit.collider != null) //om du träffar ett objekt //Robin
+                    {
+                        //print(hit.collider.gameObject.tag);
+                        if(hit.collider.gameObject.tag == "Player") //om objektet är spelaren  //Robin
+                        {
+                        if (!CanShoot) //om du kan skjuta skjuter gubben //Robin
+                            {
+                                Instantiate(bulletEnemy, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+                                Invoke("Cooldown", 1);
+                                CanShoot = true;
+                                agent.isStopped = true;
+                            }
+                        }
+                        else //annars fortsätter den att försöka hitta spelaren //Robin
+                        {
+                            agent.isStopped = false;
+                        }
                     }
-                    agent.isStopped = true;
+                        
                 }
                 else
                 {
-                    if (!enemySource.isPlaying)
+                    if (!enemySource.isPlaying) //om gubben går spelas ljudet //Robin
                     {
                         enemySource.PlayOneShot(enemyStep, 1);
                     }
-                    agent.isStopped = false;
+                    agent.isStopped = false; //gubben kan gå //Robin
                 }
 
 
@@ -81,7 +101,9 @@ public class EnemyScript : MonoBehaviour
 
             if (!chasing) //Elanor - Gubben rör sig mot nästa position när den har gått till sista positionen resetas det.
             {
+                //agent.SetDestination(new Vector3(pathPos[nuvarandeposition].transform.position.x, pathPos[nuvarandeposition].transform.position.y, transform.position.z)); //Robin
                 transform.position = Vector2.MoveTowards(transform.position, pathPos[nuvarandeposition].transform.position, 1 * Time.deltaTime); //Elanor
+     
                 if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
                 {
                     nuvarandeposition += 1; //Elanor

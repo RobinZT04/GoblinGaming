@@ -13,7 +13,7 @@ public class GoblinAxe : Weapons
     public AudioClip[] goblinClip;
     public AudioClip swingClip;
 
-    public override void Attack()
+    public override void Attack() //Slår med yxan  //Robin
     {
         if (!goblinSource.isPlaying)
             goblinSource.PlayOneShot(goblinClip[Random.Range(0, goblinClip.Length)], 1);
@@ -24,11 +24,16 @@ public class GoblinAxe : Weapons
         PlayerRotation.canRotate = false;
     }
 
-    public override void EndAttack()
+    public override void EndAttack() //Avslutar yx slaget  //Robin
     {
         goblinArm.SetBool("Axe", false);
         hitboxAxe.SetActive(false);
         PlayerRotation.canRotate = true;
         
+    }
+
+    public override void RightClick()
+    {
+        print("RightClick1");
     }
 }

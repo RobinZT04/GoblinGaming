@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     public GameObject bullet;
     Transform bulletSpawnPoint;
     // Start is called before the first frame update
-    void Start()
+    void Start() //Robin
     {
         bounceBack = false;
         body = GetComponent<Rigidbody2D>();
@@ -20,9 +20,9 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //Robin
     {
-        if (!bounceBack)
+        if (!bounceBack) 
         {
             body.velocity = transform.up * 10;
         }
@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
+        //print(collision.gameObject.name);
 
         if(collision.transform.tag == "Damage")
         {
