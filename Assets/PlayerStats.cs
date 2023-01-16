@@ -9,6 +9,11 @@ public class PlayerStats : MonoBehaviour
     Image healthBar;
     public Sprite[] healthStates;
 
+    public Animator goblinHead;
+
+    public AudioSource goblinSource;
+    public AudioClip goblinClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,15 @@ public class PlayerStats : MonoBehaviour
         if(other.transform.tag == "EW") //"Enemy weapon" du tar skada
         {
             hp -= 1;
+            goblinHead.SetBool("Damage", true);
+            goblinSource.PlayOneShot(goblinClip, 0.5f);
+            Invoke("ResetAnim", 0.2f);
             Destroy(other.gameObject);
         }
+    }
+
+    void ResetAnim()
+    {
+        goblinHead.SetBool("Damage", false);
     }
 }
