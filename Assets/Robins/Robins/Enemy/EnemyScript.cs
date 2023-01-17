@@ -32,6 +32,8 @@ public class EnemyScript : MonoBehaviour
 
     RaycastHit2D hit;
 
+    public AudioClip enemyShot; //Elanor
+
 
 
     // Start is called before the first frame update
@@ -75,6 +77,8 @@ public class EnemyScript : MonoBehaviour
                                 Invoke("Cooldown", 1);
                                 CanShoot = true;
                                 agent.isStopped = true;
+
+                                enemySource.PlayOneShot(enemyShot, 0.2f); //Elanor
                             }
                         }
                         else //annars fortsätter den att försöka hitta spelaren //Robin
