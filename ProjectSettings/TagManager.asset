@@ -10,6 +10,9 @@ TagManager:
   - HealthBar
   - EW
   - BS
+  - NextLvl
+  - Elevator
+  - Enter
   layers:
   - Default
   - TransparentFX

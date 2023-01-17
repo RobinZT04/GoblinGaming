@@ -16,7 +16,7 @@ public class EnemyScript : MonoBehaviour
     public int nuvarandeposition; //Elanor
     public bool chasing; //Elanor 
 
-    public bool DEAD;
+
 
     bool CanShoot;
 
@@ -47,7 +47,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         
-        if (!DEAD && !PlayerAttack.playerDead)
+        if (!humanBody.DEAD && !PlayerAttack.playerDead)
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
             {

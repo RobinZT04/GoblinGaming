@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sound")]
     public AudioSource goblinWalking;
     public AudioClip goblinWalkingClip;
+
+    public GameObject Elevator;
+    public GameObject exitFade;
+
 
     // Update is called once per frame
     void Update()
@@ -48,5 +53,27 @@ public class PlayerMovement : MonoBehaviour
                 goblinFeet.SetBool("Moving", false);
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.transform.tag == "Enter")
+        {
+            Elevator.SetActive(true);
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform.tag == "Elevator")
+        {
+            Invoke("NextLevel", 3);
+            exitFade.SetActive(true);
+        }
+    }
+
+    void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
