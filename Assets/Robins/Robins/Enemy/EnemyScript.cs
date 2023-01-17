@@ -46,7 +46,6 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (!humanBody.DEAD && !PlayerAttack.playerDead)
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor

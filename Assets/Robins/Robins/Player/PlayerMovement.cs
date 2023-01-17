@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject Elevator;
     public GameObject exitFade;
+    public Animator elevator1;
+    public GameObject elevatorDoor;
 
 
     // Update is called once per frame
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.transform.tag == "Enter")
         {
             Elevator.SetActive(true);
+            elevator1.SetBool("Close", true);
         }
 
     }
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.transform.tag == "Elevator")
         {
             Invoke("NextLevel", 3);
+            elevatorDoor.SetActive(true);
             exitFade.SetActive(true);
         }
     }

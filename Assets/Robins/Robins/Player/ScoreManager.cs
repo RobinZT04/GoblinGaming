@@ -21,6 +21,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject arrowEnd;
 
     public GameObject elevatorDoor;
+    public Animator elevatorAnim;
 
     bool played = true;
     // Update is called once per frame
@@ -41,6 +42,7 @@ public class ScoreManager : MonoBehaviour
                 elevatorSource.PlayOneShot(elevatorPling, 1);
                 played = false;
             }
+            elevatorAnim.SetBool("Open", true);
             if(!elevatorSource.isPlaying)
             elevatorSource.PlayOneShot(elvatorClip, 0.3f);
             arrowEnd.SetActive(true);

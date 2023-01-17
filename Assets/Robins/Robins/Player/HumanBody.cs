@@ -21,6 +21,8 @@ public class HumanBody : MonoBehaviour
 
     public bool animate;
 
+    public Vector3 bDeath;
+
     private void Awake()
     {
         chasing = false;
@@ -28,8 +30,13 @@ public class HumanBody : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
+        if (DEAD)
+        {
+            transform.position = bDeath;
+        }
         if (!DEAD)
         {
+            bDeath = transform.position;
             if (animate) //ändrar animationer för fiende  //Robin
             {
                 enemyBody.SetBool("Moving", true);

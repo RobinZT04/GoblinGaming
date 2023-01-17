@@ -16,10 +16,13 @@ public class EnemyStats : MonoBehaviour
     {
         if(other.transform.tag == "Damage")
         {
-            ScoreManager.kills += 1;
-            Instantiate(trash, transform.position, Quaternion.identity);
-            enemySource.PlayOneShot(enemyClip[Random.Range(0, enemyClip.Length)], 0.5f);
-            Death();
+            if (!enemy.DEAD)
+            {
+                ScoreManager.kills += 1;
+                Instantiate(trash, transform.position, Quaternion.identity);
+                enemySource.PlayOneShot(enemyClip[Random.Range(0, enemyClip.Length)], 0.5f);
+                Death();
+            }
         }
     }
 
