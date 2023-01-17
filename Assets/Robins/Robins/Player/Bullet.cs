@@ -15,7 +15,9 @@ public class Bullet : MonoBehaviour
     {
         bounceBack = false;
         body = GetComponent<Rigidbody2D>();
-        Invoke("DestroyFunction", 0.3f);
+        //Invoke("DestroyFunction", 0.3f);
+
+        transform.eulerAngles += new Vector3(0,0, Random.Range(-10, 10));
         
     }
 

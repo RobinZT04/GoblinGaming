@@ -30,10 +30,11 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         //Klickar man på vänsterklick så visas nästa del av dialogen -William
-        if (Input.GetKeyDown(KeyCode.Mouse0) && dialogueAnimator.GetBool("IsOpen"))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space) && dialogueAnimator.GetBool("IsOpen"))
         {
             DisplayNextSentence();
         }
+
     }
     public void StartDialogue(Dialogue dialogue)
     {
@@ -120,6 +121,7 @@ public class DialogueManager : MonoBehaviour
     //Avslutar dialogen med en animation -William
     void EndDialogue()
     {
+        PlayerMovement.canmove = true;
         dialogueAnimator.SetBool("IsOpen", false);
         fadeAnimator.SetBool("IsOpen", false);
     }

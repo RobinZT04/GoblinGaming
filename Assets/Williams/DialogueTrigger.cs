@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     //Kallar på DialogueManager för att starta dialogen -William
     public void TriggerDialogue()
     {
+        PlayerMovement.canmove = false;
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

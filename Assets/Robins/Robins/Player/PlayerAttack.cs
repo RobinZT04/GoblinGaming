@@ -49,45 +49,48 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!playerDead)
+        if (PlayerMovement.canmove)
         {
-            if (body.velocity.magnitude >= 0.1f) //Spelar en animation när du går  //Robin
+            if (!playerDead)
             {
-                goblinArm.SetBool("Moving", true);
-
-            }
-            else
-            {
-                goblinArm.SetBool("Moving", false);
-            }
-
-            if (durability == 0) //Om du har slut på durability  //Robin
-            {
-                goblinArm.SetBool("Gun", false);
-
-                if (index == 1) //om du använder pistolen resettas saker som pistolen gjort  //Robin
+                if (body.velocity.magnitude >= 0.1f) //Spelar en animation när du går  //Robin
                 {
-                    Time.timeScale = 1f;
-                    if (Input.GetMouseButton(1))
-                    {
-                        if (timeSource.isPlaying)
-                            timeSource.Stop();
-                        if (!timeSource.isPlaying)
-                            timeSource.PlayOneShot(timeclip2, 0.5f);
-                        lensDistortion.SetActive(false);
-                    }
+                    goblinArm.SetBool("Moving", true);
+
                 }
-                index = 0;
+                else
+                {
+                    goblinArm.SetBool("Moving", false);
+                }
+
+                if (durability == 0) //Om du har slut på durability  //Robin
+                {
+                    goblinArm.SetBool("Gun", false);
+
+                    if (index == 1) //om du använder pistolen resettas saker som pistolen gjort  //Robin
+                    {
+                        Time.timeScale = 1f;
+                        if (Input.GetMouseButton(1))
+                        {
+                            if (timeSource.isPlaying)
+                                timeSource.Stop();
+                            if (!timeSource.isPlaying)
+                                timeSource.PlayOneShot(timeclip2, 0.5f);
+                            lensDistortion.SetActive(false);
+                        }
+                    }
+                    index = 0;
+                }
+
+                if (Input.GetMouseButtonDown(0) && canAttack) //Slå med vapen  //Robin
+                {
+                    weapon[index].Attack();
+                    Invoke("EndAttack", cooldown);
+                }
+
+                weapon[index].RightClick(); //gör det möjligt att använda högerklicks ability  //Robin
+
             }
-
-            if (Input.GetMouseButtonDown(0) && canAttack) //Slå med vapen  //Robin
-            {
-                weapon[index].Attack();
-                Invoke("EndAttack", cooldown);
-            }
-
-            weapon[index].RightClick(); //gör det möjligt att använda högerklicks ability  //Robin
-
         }
     }
 

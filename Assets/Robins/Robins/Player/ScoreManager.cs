@@ -24,11 +24,20 @@ public class ScoreManager : MonoBehaviour
     public Animator elevatorAnim;
 
     bool played = true;
+
+    public DialogueTrigger dTrigger;
     // Update is called once per frame
 
     private void Start()
     {
         kills = 0;
+        Invoke("Dialog", 1);
+    }
+        
+    void Dialog()
+    {
+        dTrigger.TriggerDialogue();
+
     }
     void Update()
     {
