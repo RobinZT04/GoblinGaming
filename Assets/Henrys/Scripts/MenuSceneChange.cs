@@ -6,35 +6,34 @@ using UnityEngine.UI;
 
 public class MenuSceneChange : MonoBehaviour
 {
-    AudioSource buttonPress;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    // Väntar 0,5 sekunder innan scenen byts (för att knappens ljud ska hinna spelas) -Henry
     public void Maingamebutton()
     {
-        //SceneManager.LoadScene("");
-        buttonPress.Play();
+        Invoke("MainGamebutton2", 0.5f);
+    }
+    // När man klickar på knappen byter den scen till själva spelet -Henry
+    public void Maingamebutton2()
+    {
+        SceneManager.LoadScene("Level1");
     }
 
+    // Samma som ovan (fast annan scen) -Henry
     public void Settingsbutton()
     {
+        Invoke("Settingsbutton2", 0.5f);
+    }
+    public void Settingsbutton2()
+    {
         SceneManager.LoadScene("SettingsScreen");
-        buttonPress.Play();
     }
 
+    //         - || -
     public void Creditsbutton()
     {
-        SceneManager.LoadScene("CreditsScreen");
-        buttonPress.Play();
+        Invoke("Creditsbutton2", 0.5f);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Creditsbutton2()
     {
-        
+        SceneManager.LoadScene("CreditsScreen");
     }
 }

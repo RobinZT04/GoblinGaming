@@ -5,21 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class CreditsButton : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    // Gör att man går tillbaka till main menyn när man klickar på knappen -Henry
     public void BackToMenuFromCredits()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
