@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Robins/Robins.unity
     guid: b163835891f540640bc346b2fa86c855
   - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: e1337cc48a9e9434984425a68d73cb6c
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

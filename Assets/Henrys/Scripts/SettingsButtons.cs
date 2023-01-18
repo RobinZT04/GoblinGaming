@@ -5,35 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class SettingsButtons : MonoBehaviour
 {
+    // Gör att man går tillbaks till main menyn när man klickar på knappen -Henry
     public void BackToMenuFromSettings()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
+    // Gör att skärmen byts till fullscreen när man klickar på knappen -Henry
     public void Fullscreen()
     {
         Screen.fullScreen = true;
     }
 
+    // Samma som ovan fast windowed istället -Henry
     public void Windowed()
     {
         Screen.fullScreen = false;
     }
 
+    // Trollfunktion som stänger av spelet när man tror att man rapporterar en bug :D -Henry
     public void BugReport()
     {
         Application.Quit();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

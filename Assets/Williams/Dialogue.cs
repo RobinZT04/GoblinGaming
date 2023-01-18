@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-//All information som behövs, alltså namnen, bilderna, och texterna -William
+//All information som behövs, alltså namnen, bilderna, texterna samt ifall scenen ska bytas därefter -William
 public class Dialogue
 {
+    public bool changeScene;
     public string[] names;
     public Sprite[] sprites;
     public AudioClip[] audioClips;

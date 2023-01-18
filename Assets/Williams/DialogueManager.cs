@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
     public Image characterImage;
+    private bool changeScene;
 
     public Animator dialogueAnimator;
     public Animator fadeAnimator;
@@ -38,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue)
     {
+        changeScene = dialogue.changeScene;
+
         //Startar dialogen med en animation -William
         dialogueAnimator.SetBool("IsOpen", true);
         fadeAnimator.SetBool("IsOpen", true);
@@ -79,6 +83,13 @@ public class DialogueManager : MonoBehaviour
         {
             audioSource.Stop();
             EndDialogue();
+
+            //Ändrar scenen till nästa scen ifall den ska ändras -William
+            if (changeScene)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
             return;
         }
 
