@@ -65,6 +65,8 @@ public class PlayerAttack : MonoBehaviour
 
                 if (durability == 0) //Om du har slut på durability  //Robin
                 {
+
+                    goblinArm.SetBool("GunIdle", false);
                     goblinArm.SetBool("Gun", false);
 
                     if (index == 1) //om du använder pistolen resettas saker som pistolen gjort  //Robin
@@ -109,7 +111,7 @@ public class PlayerAttack : MonoBehaviour
         if(other.transform.tag == "Vapen")
         {
             goblinArm.SetBool("Axe", false);
-            goblinArm.SetBool("Gun", false);
+            goblinArm.SetBool("GunIdle", true);
             index = other.GetComponent<PickAbleObject>().index;
             durability = other.GetComponent<PickAbleObject>().durability;
             canAttack = true;

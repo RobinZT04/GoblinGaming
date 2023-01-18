@@ -119,16 +119,18 @@ public class EnemyScript : MonoBehaviour
          pathPos[nuvarandeposition].transform.position.y - transform.position.y //tar musens positon.y - transform.position.y
          );
 
-                humanBody.animate = true;
+                
                 humanRot.transform.up = direction; //transform.up ör nu likamed direction
                 if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
                 {
                     nuvarandeposition += 1; //Elanor
+                    humanBody.animate = true;
                 }
 
                 if (nuvarandeposition == pathPos.Length) //Elanor
                 {
                     nuvarandeposition = 0; //Elanor
+                    humanBody.animate = false;
                 }
 
             }
