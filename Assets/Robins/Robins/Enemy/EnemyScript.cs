@@ -12,7 +12,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     HumanBody humanBody;
 
-    public Transform[] pathPos; //Elanor
+    public GameObject[] pathPos; //Elanor
     public int nuvarandeposition; //Elanor
     public bool chasing; //Elanor 
 
@@ -102,15 +102,25 @@ public class EnemyScript : MonoBehaviour
                 agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z)); //Robin
                 humanBody.Invoke("Head", 0); //Robin 
                 chasing = true; //Elanor
+                transform.eulerAngles = new Vector3(0, 0, 0); //Robin
             }
 
-            transform.eulerAngles = new Vector3(0, 0, 0); //Robin
+
 
             if (!chasing) //Elanor - Gubben rör sig mot nästa position när den har gått till sista positionen resetas det.
             {
+                agent.isStopped = false;
                 //agent.SetDestination(new Vector3(pathPos[nuvarandeposition].transform.position.x, pathPos[nuvarandeposition].transform.position.y, transform.position.z)); //Robin
                 transform.position = Vector2.MoveTowards(transform.position, pathPos[nuvarandeposition].transform.position, 1 * Time.deltaTime); //Elanor
-     
+
+                Vector2 direction = new Vector2 //Vector2 direction är new vector2
+         (
+         pathPos[nuvarandeposition].transform.position.x - transform.position.x, //tar musens positon.x - transform.position.x
+         pathPos[nuvarandeposition].transform.position.y - transform.position.y //tar musens positon.y - transform.position.y
+         );
+
+                humanBody.animate = true;
+                humanRot.transform.up = direction; //transform.up ör nu likamed direction
                 if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
                 {
                     nuvarandeposition += 1; //Elanor

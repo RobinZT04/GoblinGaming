@@ -12,7 +12,13 @@ public class RoomLight : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             audioSource.Play();
-            Destroy(gameObject);
+            Invoke("destroyObj", 0.3f);
+
         }
+    }
+
+    void destroyObj()
+    {
+        Destroy(gameObject);
     }
 }

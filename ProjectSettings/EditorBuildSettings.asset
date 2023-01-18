@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Robins/Robins.unity
     guid: b163835891f540640bc346b2fa86c855
   - enabled: 1
@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Henrys/CreditsScreen.unity
     guid: 5ca5ff0c99deef94d9c16926a3f1be2c
   - enabled: 0
-    path: Assets/Henrys/LoadingScreen.unity
+    path: "Assets/Henrys/LoadingScreen(SkaInteAnv\xE4ndas).unity"
     guid: d632dd923d4c7f84db0247cba8ef39a5
   m_configObjects: {}

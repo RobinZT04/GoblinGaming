@@ -1,10 +1,11 @@
 using NavMeshPlus.Extensions;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityEngine;
-using UnityEngine.AI;
+
 #endif
 
 namespace NavMeshPlus.Components
@@ -15,11 +16,12 @@ namespace NavMeshPlus.Components
         Volume = 1,
         Children = 2,
     }
-
+#if UNITY_EDITOR
     [ExecuteAlways]
     [DefaultExecutionOrder(-102)]
     [AddComponentMenu("Navigation/NavMeshSurface", 30)]
     [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
+#endif
     public class NavMeshSurface : MonoBehaviour
     {
         [SerializeField]

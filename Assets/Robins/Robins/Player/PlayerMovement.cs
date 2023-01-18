@@ -27,13 +27,18 @@ public class PlayerMovement : MonoBehaviour
     public GameObject elevatorDoor;
     public static bool canmove;
 
+    public Vector3 pAlivePos;
+
     // Update is called once per frame
     void Update()
     {
+        
         if (canmove)
         {
             if (!PlayerAttack.playerDead)
             {
+                pAlivePos = transform.position;
+
                 posX = Input.GetAxis("Horizontal");
                 posY = Input.GetAxis("Vertical");
 
@@ -56,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
                     goblinArm.SetBool("Moving", false);
                     goblinFeet.SetBool("Moving", false);
                 }
+            }
+            else
+            {
+                transform.position = pAlivePos;
             }
         }
     }
