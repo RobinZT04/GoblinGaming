@@ -4560,6 +4560,7 @@ MonoBehaviour:
   exitFade: {fileID: 0}
   elevator1: {fileID: 0}
   elevatorDoor: {fileID: 0}
+  pAlivePos: {x: 0, y: 0, z: 0}
 --- !u!50 &1594046898
 Rigidbody2D:
   serializedVersion: 4
