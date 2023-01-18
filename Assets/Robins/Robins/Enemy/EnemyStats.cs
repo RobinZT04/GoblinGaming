@@ -11,6 +11,8 @@ public class EnemyStats : MonoBehaviour
     public AudioClip[] enemyClip;
     public HumanBody enemy;
     public GameObject gun;
+
+    public Animator enemyAnim;
     //RaycastHit2D hit;
 
     public void OnCollisionEnter2D(Collision2D other) //Fiende tar skada och spelar ett random ljud när dem dör //Robin
@@ -30,6 +32,7 @@ public class EnemyStats : MonoBehaviour
 
     void Death()
     {
+        enemyAnim.SetBool("Dead", true);
         enemy.DEAD = true;
     }
 }

@@ -2660,7 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTXT: {fileID: 1487921819}
-  limit: 2
+  limit: 5
   elevatorSource: {fileID: 311631778}
   elvatorClip: {fileID: 8300000, guid: 4d58d88f8c8d8414e88af60ac7c96445, type: 3}
   elevatorPling: {fileID: 8300000, guid: 3b08292dda262334e833c6f39aa28e63, type: 3}
@@ -3867,6 +3867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+    changeScene: 0
     names:
     - Sleepy
     - Sleepy
