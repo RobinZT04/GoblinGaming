@@ -11,15 +11,18 @@ public class SetVolume : MonoBehaviour
     [SerializeField]
     Slider volumeSlider;
     float temp;
-    private void Start()
+    private void Awake()
     {
         mixer.GetFloat("MusicVol", out temp);
-      //  volumeSlider.value = ( Mathf. temp / 20);
+        //print(temp);
+        volumeSlider.value = ( Mathf.Pow(10, temp) / 20); //Här vill vi göra motsatsen av det vi gjorde på rad 23
+        //print("Eriks matte " + (Mathf.Pow(10, temp) / 20));
     }
 
     // När man ändrar valuen av volym slidern ändras också volymen -Henry
     public void SetLevel(float sliderValue)
     {
-        mixer.SetFloat("MusicVol", Mathf.Log10 (sliderValue) * 20);
+        //print("slider value " + sliderValue);
+        mixer.SetFloat("MusicVol", Mathf.Log10 (sliderValue) * 20); //Tar in ett värde (sliderValue) och ändrar den -Henry/Tobias
     }
 }

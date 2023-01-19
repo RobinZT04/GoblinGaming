@@ -9,7 +9,7 @@ public class MenuSceneChange : MonoBehaviour
     // Väntar 0,5 sekunder innan scenen byts (för att knappens ljud ska hinna spelas) -Henry
     public void Maingamebutton()
     {
-        Invoke("MainGamebutton2", 0.5f);
+        Invoke("Maingamebutton2", 0.5f);
     }
     // När man klickar på knappen byter den scen till själva spelet -Henry
     public void Maingamebutton2()
