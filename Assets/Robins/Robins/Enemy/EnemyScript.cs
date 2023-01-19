@@ -34,6 +34,17 @@ public class EnemyScript : MonoBehaviour
 
     public AudioClip enemyShot; //Elanor
 
+    public Vector3 lockedPos;
+
+    [SerializeField]
+    CircleCollider2D cColider2D;
+
+    [SerializeField]
+    GameObject body1; 
+    [SerializeField]
+    GameObject body2;
+    [SerializeField]
+    SpriteRenderer headRenderer;
 
 
     // Start is called before the first frame update
@@ -50,6 +61,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (!humanBody.DEAD && !PlayerAttack.playerDead)
         {
+            lockedPos = transform.position;
             if (Vector3.Distance(transform.position, player.transform.position) <= 4) //Elanor
             {
                 chasing = true;
@@ -135,6 +147,14 @@ public class EnemyScript : MonoBehaviour
 
             }
 
+        }
+        else //När fiende dör
+        {
+            transform.position = lockedPos;
+            cColider2D.isTrigger = true;
+            body1.SetActive(false);
+            body2.SetActive(false);
+            headRenderer.sortingOrder = -3;
         }
     }
 
