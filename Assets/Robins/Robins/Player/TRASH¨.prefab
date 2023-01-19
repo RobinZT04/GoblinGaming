@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231894448872681321}
   - component: {fileID: 1231894448872681320}
+  - component: {fileID: -1339493168713701255}
   m_Layer: 0
   m_Name: "TRASH\xA8"
   m_TagString: Trash
@@ -82,3 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1339493168713701255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231894448872681323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b02e89601145c4497621f45f78523e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashSprites:
+  - {fileID: 21300000, guid: 0ff9ae3ff4144a347918ecf825243224, type: 3}
+  - {fileID: 21300000, guid: 20a3b3046200c804dafdb42f216df47c, type: 3}
+  - {fileID: 21300000, guid: d7b9db6c6c3df814d988356257481bd4, type: 3}
+  - {fileID: 21300000, guid: ba2d03e54050b36468a3a1e69285feee, type: 3}
+  - {fileID: 21300000, guid: 8f1a7870316cc3f4287376eed426f708, type: 3}
