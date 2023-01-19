@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
     public AudioClip[] enemyClip;
     public HumanBody enemy;
     public GameObject gun;
+    public GameObject blood;
 
     public Animator enemyAnim;
     //RaycastHit2D hit;
@@ -22,6 +23,7 @@ public class EnemyStats : MonoBehaviour
             if (!enemy.DEAD)
             {
                 ScoreManager.kills += 1;
+                Instantiate(blood, transform.position, Quaternion.identity);
                 Instantiate(gun, transform.position, Quaternion.identity);
                 Instantiate(trash, transform.position, Quaternion.identity);
                 enemySource.PlayOneShot(enemyClip[Random.Range(0, enemyClip.Length)], 0.5f);

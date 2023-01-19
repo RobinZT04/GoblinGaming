@@ -1134,7 +1134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &89387992
 Transform:
   m_ObjectHideFlags: 0
@@ -3315,7 +3315,7 @@ MonoBehaviour:
   m_VoxelSize: 0.02
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: bc2b30e57262ece4daa4a9e7bd489338, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1078f48ae8056d14989c8fa432888345, type: 2}
 --- !u!114 &311631776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,7 +3466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &317313111
 Transform:
   m_ObjectHideFlags: 0
@@ -3810,6 +3810,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -5770,6 +5774,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -9613,9 +9621,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 825442852}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: enemyAnim
+      value: 
+      objectReference: {fileID: 1368893746}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemyClip.Array.size
       value: 2
@@ -11584,6 +11600,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -17287,7 +17307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1643401493
 Transform:
   m_ObjectHideFlags: 0
@@ -17657,7 +17677,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1690967114
 Transform:
   m_ObjectHideFlags: 0
@@ -19036,9 +19056,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1248187758}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: enemyAnim
+      value: 
+      objectReference: {fileID: 537206987}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemyClip.Array.size
       value: 2

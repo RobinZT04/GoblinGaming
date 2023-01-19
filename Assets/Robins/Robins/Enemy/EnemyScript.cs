@@ -154,7 +154,7 @@ public class EnemyScript : MonoBehaviour
             cColider2D.isTrigger = true;
             body1.SetActive(false);
             body2.SetActive(false);
-            headRenderer.sortingOrder = -3;
+            headRenderer.sortingOrder = -2;
         }
     }
 

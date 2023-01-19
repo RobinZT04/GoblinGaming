@@ -2864,6 +2864,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 470154755}
@@ -10283,6 +10287,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1349910920}
@@ -11118,6 +11126,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -13469,6 +13481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1637185684}
@@ -13962,6 +13978,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -14983,6 +15003,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
@@ -16274,6 +16298,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 8116504725836602166, guid: 532e978792ded6c4db5745aeeef3d825, type: 3}
+    - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 8884271902966882092, guid: cba1a9220b4099947aec052281b5bfc1, type: 3}
     - target: {fileID: 8872285573051993041, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: enemy
       value: 
