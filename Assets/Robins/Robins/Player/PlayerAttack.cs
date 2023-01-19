@@ -44,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
         hitboxAxe.SetActive(false);
         index = 0;
         playerDead = false;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

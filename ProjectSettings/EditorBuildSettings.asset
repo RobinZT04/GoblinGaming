@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Henrys/MainMenu.unity
     guid: 8c25ec14c1c863a4399e99f0fc48c99c
   - enabled: 1
+    path: Assets/Henrys/SettingsScreen.unity
+    guid: 5c59ca470d77dab46a9c57b7b20bfb07
+  - enabled: 1
     path: Assets/Scenes/OpeningScene.unity
     guid: e1337cc48a9e9434984425a68d73cb6c
   - enabled: 1
@@ -18,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 26301027efc4ee1438ddbcb95dc06cfc
   - enabled: 1
-    path: Assets/Henrys/SettingsScreen.unity
-    guid: 5c59ca470d77dab46a9c57b7b20bfb07
+    path: Assets/Scenes/Level3.unity
+    guid: 759f3116625a9de43a4092d44c176a35
   - enabled: 1
     path: Assets/Henrys/CreditsScreen.unity
     guid: 5ca5ff0c99deef94d9c16926a3f1be2c
