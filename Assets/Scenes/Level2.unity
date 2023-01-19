@@ -10025,40 +10025,26 @@ MonoBehaviour:
   dialogue:
     changeScene: 0
     names:
-    - Sleepy
-    - Sleepy
+    - Lil' Sleepy
+    - Lil' Sleepy
     - Guts
-    - Sleepy
-    - Guts
-    - Sleepy
-    - Guts
+    - Lil' Sleepy
     sprites:
     - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
     - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
     - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
     - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
-    - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
-    - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
-    - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
     audioClips:
     - {fileID: 8300000, guid: b33c0fd746ddc4e4a9aba2210bd278c0, type: 3}
     - {fileID: 8300000, guid: 7f74c4c0272a1a9469296792e1680501, type: 3}
     - {fileID: 8300000, guid: c4fe76b0e0c67e84b85c22edf4e4d9e4, type: 3}
     - {fileID: 8300000, guid: a260e8038036a564484d0b9d684dd9ab, type: 3}
-    - {fileID: 8300000, guid: c4fe76b0e0c67e84b85c22edf4e4d9e4, type: 3}
-    - {fileID: 8300000, guid: 7f74c4c0272a1a9469296792e1680501, type: 3}
-    - {fileID: 8300000, guid: c4fe76b0e0c67e84b85c22edf4e4d9e4, type: 3}
     sentences:
-    - "Alright, we\u2019re at their office now. \r\n\r\nTake your revenge, and kill
-      them all until you reach the top where the CEO is! \r"
-    - "In the meantime, I\u2019ll clean up after you and pick up the trash they leave
-      behind!\r"
+    - "Second floor reached. Great job my little (William kom p\xE5 n\xE5got kul
+      att skriva h\xE4r)"
+    - Now, there are more people here to take care of, so continue taking your revenge!
     - ....
-    - 'You know me, the forest spirit.. long time friend of 15 years, best man at
-      your wedding. '
-    - ...
-    - Yum yum, I love trash, yummy yummy I love trash!
-    - ...
+    - (this is the part where you kill them)
 --- !u!114 &1347619558
 MonoBehaviour:
   m_ObjectHideFlags: 0
