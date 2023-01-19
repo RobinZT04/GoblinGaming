@@ -2815,6 +2815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiende (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4817,7 +4821,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008100897, y: 0.06247866}
+  m_Offset: {x: 0.000085771084, y: 0.024113283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4828,7 +4832,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7083667, y: 0.8750427}
+  m_Size: {x: 0.9295851, y: 0.9517734}
   m_EdgeRadius: 0
 --- !u!114 &803369155
 MonoBehaviour:
@@ -5420,7 +5424,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0014399737, y: -0.007638663}
+  m_Offset: {x: 0.0123505, y: -0.02071546}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5431,7 +5435,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8761598, y: 0.77084035}
+  m_Size: {x: 0.93132186, y: 0.9329926}
   m_EdgeRadius: 0
 --- !u!114 &859650489
 MonoBehaviour:
@@ -6178,7 +6182,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10139458, y: -0.018859327}
+  m_Offset: {x: -0.013104349, y: -0.038702294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6189,7 +6193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7972108, y: 0.56623757}
+  m_Size: {x: 0.9737913, y: 0.91207397}
   m_EdgeRadius: 0
 --- !u!114 &936289640
 MonoBehaviour:
@@ -6941,7 +6945,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008100897, y: 0.06247866}
+  m_Offset: {x: 0.012953177, y: 0.025824577}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6952,7 +6956,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7083667, y: 0.8750427}
+  m_Size: {x: 0.8915614, y: 0.94835085}
   m_EdgeRadius: 0
 --- !u!114 &995796231
 MonoBehaviour:
@@ -10238,6 +10242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiende (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11077,6 +11085,10 @@ PrefabInstance:
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
@@ -13432,6 +13444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiende (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -13929,6 +13945,10 @@ PrefabInstance:
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
@@ -14605,7 +14625,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044991806, y: -0.022204578}
+  m_Offset: {x: 0.010965198, y: -0.0013172626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14616,7 +14636,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65487635, y: 0.95559084}
+  m_Size: {x: 0.9492355, y: 0.9973655}
   m_EdgeRadius: 0
 --- !u!114 &1819444192
 MonoBehaviour:
@@ -14690,8 +14710,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819444189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.7805, y: 5.3726, z: -0.73}
-  m_LocalScale: {x: 4.4383698, y: 18.788542, z: 3}
+  m_LocalPosition: {x: 11.9, y: 5.3726, z: -0.73}
+  m_LocalScale: {x: 4.3253303, y: 18.788542, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 41
@@ -14954,6 +14974,10 @@ PrefabInstance:
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
@@ -16250,6 +16274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fiende (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7830393594311974891, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -16884,7 +16912,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0014399737, y: -0.007638663}
+  m_Offset: {x: 0.004076764, y: -0.027023554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16895,7 +16923,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8761598, y: 0.77084035}
+  m_Size: {x: 0.9433576, y: 0.9418833}
   m_EdgeRadius: 0
 --- !u!114 &2056140702
 MonoBehaviour:
