@@ -14,7 +14,7 @@ public class MenuSceneChange : MonoBehaviour
     // När man klickar på knappen byter den scen till själva spelet -Henry
     public void Maingamebutton2()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("OpeningScene");
     }
 
     // Samma som ovan (fast annan scen) -Henry

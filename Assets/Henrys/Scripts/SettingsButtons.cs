@@ -26,6 +26,10 @@ public class SettingsButtons : MonoBehaviour
     // Trollfunktion som stänger av spelet när man tror att man rapporterar en bug :D -Henry
     public void BugReport()
     {
+        Invoke("BugReport2", 0.5f);
+    }
+    public void BugReport2()
+    {
         Application.Quit();
     }
 }

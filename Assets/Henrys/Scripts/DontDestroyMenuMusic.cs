@@ -15,7 +15,7 @@ public class DontDestroyMenuMusic : MonoBehaviour
     void Update()
     {
         // Om scenen är Level1 "förstörs" bakgrundsmusiken -Henry
-        if (SceneManager.GetActiveScene().name == "Level1")
+        if (SceneManager.GetActiveScene().name == "OpeningScene")
         {
             Destroy(gameObject);
         }
