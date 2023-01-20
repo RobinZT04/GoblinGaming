@@ -27,6 +27,9 @@ public class ScoreManager : MonoBehaviour
     bool played = true;
 
     public DialogueTrigger dTrigger;
+
+    public Text deathCounter;
+    public static int deathCount;
     // Update is called once per frame
 
     private void Start()
@@ -63,5 +66,6 @@ public class ScoreManager : MonoBehaviour
         }
 
         scoreTXT.text = score.ToString(); //Robin
+        deathCounter.text = "x" + deathCount.ToString();
     }
 }

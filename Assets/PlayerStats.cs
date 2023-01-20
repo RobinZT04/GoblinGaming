@@ -20,9 +20,12 @@ public class PlayerStats : MonoBehaviour
     public GameObject body1;
     public GameObject body2;
 
+    bool addDeath;
+
     // Start is called before the first frame update
     void Start()
     {
+        addDeath = false;
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
         hp = 2;  
     }
@@ -40,6 +43,11 @@ public class PlayerStats : MonoBehaviour
             body2.SetActive(false);
             PlayerAttack.playerDead = true;
             GameOver.SetActive(true);
+            if (!addDeath)
+            {
+                ScoreManager.deathCount += 1;
+                addDeath = true;
+            }
             Invoke("Restart", 2);
         }
     }

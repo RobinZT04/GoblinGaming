@@ -27,7 +27,6 @@ public class GoblinPistol : Weapons
 
     public GameObject lensDistortion;
 
-
     public override void Attack() //skjuter med pistolen  //Robin
     {
         goblinArm.SetBool("GunIdle", false);
@@ -45,7 +44,8 @@ public class GoblinPistol : Weapons
         sprite.sprite = gun;
         goblinArm.SetBool("GunIdle", true);
         PlayerRotation.canRotate = true;
-        PlayerAttack.durability -= 1;
+        //PlayerAttack.durability -= 1;
+        print(PlayerAttack.durability);
     }
 
     public override void RightClick() //använder ability (sakta ned tiden)  //Robin

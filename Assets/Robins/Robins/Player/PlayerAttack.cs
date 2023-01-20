@@ -89,6 +89,10 @@ public class PlayerAttack : MonoBehaviour
                 {
                     weapon[index].Attack();
                     Invoke("EndAttack", cooldown);
+                    if (durability > 0)
+                    {
+                        durability -= 1;
+                    }
                 }
 
                 weapon[index].RightClick(); //gör det möjligt att använda högerklicks ability  //Robin

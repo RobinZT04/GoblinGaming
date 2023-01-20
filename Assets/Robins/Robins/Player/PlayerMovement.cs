@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 pAlivePos;
 
+    private void Start()
+    {
+        canmove = false;
+    }
     // Update is called once per frame
     void Update()
     {
