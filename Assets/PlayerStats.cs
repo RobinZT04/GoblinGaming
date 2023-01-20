@@ -48,7 +48,7 @@ public class PlayerStats : MonoBehaviour
                 ScoreManager.deathCount += 1;
                 addDeath = true;
             }
-            Invoke("Restart", 2);
+            Invoke("Restart", 1);
         }
     }
 

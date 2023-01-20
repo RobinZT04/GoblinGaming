@@ -673,7 +673,7 @@ AudioSource:
   m_GameObject: {fileID: 85788560}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 54897bb1cd531ea44b52dd8586c63476, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2163,7 +2163,7 @@ AudioSource:
   m_GameObject: {fileID: 211462518}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 54897bb1cd531ea44b52dd8586c63476, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2475,6 +2475,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (19)
@@ -2976,6 +2980,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[4]
       value: 
       objectReference: {fileID: 1185727272}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (16)
@@ -4813,6 +4821,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (17)
@@ -5636,7 +5648,7 @@ AudioSource:
   m_GameObject: {fileID: 512973742}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 54897bb1cd531ea44b52dd8586c63476, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6345,6 +6357,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (12)
@@ -6665,6 +6681,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[6]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (14)
@@ -8159,6 +8179,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[6]
       value: 
       objectReference: {fileID: 1667279552}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (13)
@@ -8427,6 +8451,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (11)
@@ -9031,7 +9059,7 @@ AudioSource:
   m_GameObject: {fileID: 885897117}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: f60fe506ff427ae4480586a4e30fd2fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.539
@@ -11916,6 +11944,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (20)
@@ -12987,6 +13019,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (15)
@@ -14161,6 +14197,10 @@ PrefabInstance:
       propertyPath: pathPos.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4876685764623622957, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
     - target: {fileID: 7821548028414661921, guid: bca2b878c9ad74a448338dadc28e5bc7, type: 3}
       propertyPath: m_Name
       value: Fiende (18)
@@ -15729,7 +15769,7 @@ AudioSource:
   m_GameObject: {fileID: 1516130004}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -15825,7 +15865,7 @@ AudioSource:
   m_GameObject: {fileID: 1516130004}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -18602,7 +18642,7 @@ AudioSource:
   m_GameObject: {fileID: 1826984554}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -20180,7 +20220,7 @@ AudioSource:
   m_GameObject: {fileID: 1980769091}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 54897bb1cd531ea44b52dd8586c63476, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -20716,7 +20756,7 @@ AudioSource:
   m_GameObject: {fileID: 2084654608}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 54897bb1cd531ea44b52dd8586c63476, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

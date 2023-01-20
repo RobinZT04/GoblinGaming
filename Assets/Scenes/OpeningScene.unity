@@ -805,7 +805,7 @@ AudioSource:
   m_GameObject: {fileID: 1132525678}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a8382310bbd92234599c304ad8ffb2fa, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -930,7 +930,11 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
     - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
     - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
-    audioClips: []
+    audioClips:
+    - {fileID: 8300000, guid: 7f74c4c0272a1a9469296792e1680501, type: 3}
+    - {fileID: 8300000, guid: b33c0fd746ddc4e4a9aba2210bd278c0, type: 3}
+    - {fileID: 8300000, guid: a260e8038036a564484d0b9d684dd9ab, type: 3}
+    - {fileID: 8300000, guid: c4fe76b0e0c67e84b85c22edf4e4d9e4, type: 3}
     sentences:
     - 'Hey you, wake up! Remember what happened? '
     - Big oil destroyed our forest! They killed your wife Goblina and little Goblinky
