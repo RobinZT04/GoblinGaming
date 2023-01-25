@@ -131,7 +131,7 @@ public class EnemyScript : MonoBehaviour
          pathPos[nuvarandeposition].transform.position.y - transform.position.y //tar musens positon.y - transform.position.y
          );
 
-                
+
                 humanRot.transform.up = direction; //transform.up ör nu likamed direction
                 if (Vector3.Distance(transform.position, pathPos[nuvarandeposition].transform.position) <= 0.2f) //Elanor
                 {

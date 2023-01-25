@@ -2871,7 +2871,7 @@ GameObject:
   - component: {fileID: 229790145}
   - component: {fileID: 229790144}
   - component: {fileID: 229790143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lit_soffa (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6353,6 +6353,7 @@ MonoBehaviour:
   healthStates:
   - {fileID: 21300000, guid: 8e68aad78707953468aa3649c2c10595, type: 3}
   - {fileID: 21300000, guid: 99214693a0e5e49469abecb7e11b0378, type: 3}
+  - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
   goblinHead: {fileID: 518640459}
   goblinSource: {fileID: 518640454}
   goblinClip: {fileID: 8300000, guid: 95795d610b556714299a719b3151b40f, type: 3}
@@ -12886,7 +12887,7 @@ GameObject:
   - component: {fileID: 1137992002}
   - component: {fileID: 1137992005}
   - component: {fileID: 1137992004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: konferans_bord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15184,7 +15185,7 @@ GameObject:
   - component: {fileID: 1390003938}
   - component: {fileID: 1390003936}
   - component: {fileID: 1390003937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lit_soffa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19471,7 +19472,7 @@ GameObject:
   - component: {fileID: 1885887984}
   - component: {fileID: 1885887983}
   - component: {fileID: 1885887982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fet_diskbank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

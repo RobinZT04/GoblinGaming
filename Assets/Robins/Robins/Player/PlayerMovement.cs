@@ -29,9 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 pAlivePos;
 
+    PlayerStats pstats;
+
     private void Start()
     {
         canmove = false;
+        pstats = GetComponent<PlayerStats>();
     }
     // Update is called once per frame
     void Update()

@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp >= 0 && hp <2) //hp sprite ändras beroende på hp
+        if(hp >= 0 && hp <=2) //hp sprite ändras beroende på hp
         healthBar.sprite = healthStates[hp];
         //print(hp);
         if(hp <= 0)
@@ -65,6 +65,18 @@ public class PlayerStats : MonoBehaviour
             postProcess.SetActive(true);
             goblinSource.PlayOneShot(goblinClip, 0.5f);
             Invoke("ResetAnim", 0.3f);
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.transform.tag == "Healing")
+        {
+            hp = 2;
+            //healthBar.sprite = healthStates[hp];
+            //healthBar.sprite = healthStates[hp];
             Destroy(other.gameObject);
         }
     }
