@@ -11336,10 +11336,10 @@ MonoBehaviour:
     - Guts
     - Lil' Sleepy
     sprites:
-    - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
-    - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
+    - {fileID: 21300000, guid: edda1899b18acf64e9f2eb25b34d3e38, type: 3}
+    - {fileID: 21300000, guid: edda1899b18acf64e9f2eb25b34d3e38, type: 3}
     - {fileID: 21300000, guid: 73e5e2fb6b24bee4f8bbf3699959ffaa, type: 3}
-    - {fileID: 21300000, guid: cdfeeba6a72b72a48b7054d49ae0a15c, type: 3}
+    - {fileID: 21300000, guid: edda1899b18acf64e9f2eb25b34d3e38, type: 3}
     audioClips:
     - {fileID: 8300000, guid: b33c0fd746ddc4e4a9aba2210bd278c0, type: 3}
     - {fileID: 8300000, guid: 7f74c4c0272a1a9469296792e1680501, type: 3}
@@ -16040,7 +16040,7 @@ RectTransform:
   - {fileID: 400477951}
   - {fileID: 998140401}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -16403,7 +16403,7 @@ Transform:
   m_LocalScale: {x: 0.29813933, y: 0.29813933, z: 0.29813933}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1819444189
 GameObject:
